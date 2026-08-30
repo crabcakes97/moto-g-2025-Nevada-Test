@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/nevada
+DEVICE_PATH := device/motorola/utah
 
 # Building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -54,7 +54,7 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Assert DOMINACE
-TARGET_OTA_ASSERT_DEVICE := nevada
+TARGET_OTA_ASSERT_DEVICE := utah
 
 # Kernel SPICYYYYYYY
 TARGET_KERNEL_ARCH := arm64
