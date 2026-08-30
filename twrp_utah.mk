@@ -14,8 +14,8 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # Inherit from Nevada device tree.
 $(call inherit-product, device/motorola/nevada/device.mk)
 
-PRODUCT_DEVICE := nevada
-PRODUCT_NAME := twrp_nevada
+PRODUCT_DEVICE := utah
+PRODUCT_NAME := twrp_utah
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto G Play 2026
+PRODUCT_MODEL := Moto G 2026
 PRODUCT_MANUFACTURER := motorola
