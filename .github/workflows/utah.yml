@@ -20,7 +20,7 @@ jobs:
             /opt/hostedtoolcache/CodeQL || true
           sudo docker image prune --all --force || true
 
-      - name: Install build dependencies
+      - name: Install build dependenciez
         run: |
           sudo apt-get update
           sudo apt-get install -y \
