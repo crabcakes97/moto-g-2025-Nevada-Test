@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from Nevada device tree.
-$(call inherit-product, device/motorola/nevada/device.mk)
+$(call inherit-product, device/motorola/utah/device.mk)
 
 PRODUCT_DEVICE := utah
 PRODUCT_NAME := twrp_utah
