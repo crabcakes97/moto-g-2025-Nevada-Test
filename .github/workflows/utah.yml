@@ -84,7 +84,7 @@ jobs:
           source build/envsetup.sh
           export ALLOW_MISSING_DEPENDENCIES=true
 
-          lunch twrp_nevada-${{ github.event.inputs.variant }}
+          lunch twrp_utah-${{ github.event.inputs.variant }}
 
           echo "=== Build configuration ==="
           get_build_var TARGET_NO_RECOVERY || true
@@ -119,7 +119,7 @@ jobs:
       - name: Upload vendor_boot image
         uses: actions/upload-artifact@v4
         with:
-          name: twrp-nevada-vendor_boot-${{ github.run_number }}
+          name: twrp-utah-vendor_boot-${{ github.run_number }}
           path: twrp/out/target/product/utah/vendor_boot.img
           if-no-files-found: error
           retention-days: 14
