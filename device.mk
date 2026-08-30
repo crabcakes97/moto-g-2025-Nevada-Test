@@ -1,4 +1,4 @@
-LOCAL_PATH := device/motorola/nevada
+LOCAL_PATH := device/motorola/utah
 
 # Soong namespace
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
