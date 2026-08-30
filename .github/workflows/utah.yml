@@ -1,4 +1,4 @@
-name: Build TWRP - nevada
+name: Build TWRP - utah
 
 on:
   workflow_dispatch:
@@ -58,23 +58,23 @@ jobs:
             --no-clone-bundle \
             --no-tags
 
-      - name: Checkout Nevada device tree
+      - name: Checkout utah device tree
         uses: actions/checkout@v4
         with:
-          path: twrp/device/motorola/nevada
+          path: twrp/device/motorola/utah
 
-      - name: Verify Nevada device tree
+      - name: Verify utah device tree
         working-directory: twrp
         run: |
-          echo "=== Nevada device tree ==="
-          find device/motorola/nevada -maxdepth 2 -type f | sort
+          echo "=== utah device tree ==="
+          find device/motorola/utah -maxdepth 2 -type f | sort
           echo
           echo "=== Prebuilt files ==="
-          ls -lah device/motorola/nevada/prebuilt/ || true
+          ls -lah device/motorola/utah/prebuilt/ || true
           echo
           echo "=== Product files ==="
-          ls -lah device/motorola/nevada/*product*.mk \
-            device/motorola/nevada/AndroidProducts.mk \
+          ls -lah device/motorola/utah/*product*.mk \
+            device/motorola/utah/AndroidProducts.mk \
             2>/dev/null || true
 
       - name: Build TWRP vendor_boot
@@ -100,7 +100,7 @@ jobs:
         working-directory: twrp
         run: |
           set -e
-          OUT_DIR="out/target/product/nevada"
+          OUT_DIR="out/target/product/utah"
           echo "OUT_DIR=$OUT_DIR" >> "$GITHUB_ENV"
 
           echo "=== Output directory ==="
@@ -120,6 +120,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: twrp-nevada-vendor_boot-${{ github.run_number }}
-          path: twrp/out/target/product/nevada/vendor_boot.img
+          path: twrp/out/target/product/utah/vendor_boot.img
           if-no-files-found: error
           retention-days: 14
